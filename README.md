@@ -1,0 +1,3 @@
+# newproject
+# strojka
+# mrgenerator
