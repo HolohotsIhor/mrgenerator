@@ -1,341 +1,360 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
-	<meta charset="UTF-8">
-	<title>Mrgenerator</title>
-	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	<link rel="stylesheet" href="css/libs.min.css">
-	<link rel="stylesheet" href="css/main.css">
-	<link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <meta charset="UTF-8">
+    <title>Mrgenerator</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/libs.min.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
 </head>
+
 <body>
-	<header class="__header">
-		<div class="container">
-			<div class="row">
-				<div class="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6 __header-logo-box">
-					<a href="#"><h2><span>mr.</span>Generator</h2></a>
-				</div>
-				<div class="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6 __header-switcher-box">
-					<div class="language-switcher">
-						<select name="lang_choice_1" id="lang_choice_1">
-							<option value="ru" selected="selected">Ру</option>
-							<option value="uk">Укр</option>
-						</select>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="top-descr">
-			<div class="top-centered">
-				<div class="marquee-box">
-					<div class="container">
-						<marquee behavior="scroll" direction="right">
-							<ul class="post-meta">
-								<li><span class="post-meta-key">Update:</span> Page with full info on maintenance!!!!</li>
-							</ul>
-						</marquee>
-						<div class="top_text" style="opacity: 1;"> 
-							<a href="#work-box" class="_mPS2id-h">
-								<h1>Generate a document</h1>
-							</a>
-							<p>
-								<a href="#work-box" class="_mPS2id-h">US SSN</a><span> / </span>
-								<a href="#work-box" class="_mPS2id-h">Driver license</a><span> / </span>
-								<a href="#work-box" class="_mPS2id-h">State ID</a><span> / </span>
-								<a href="#work-box" class="_mPS2id-h">Passport</a>
-							</p>
-							<div class="banner-box">
-								<a href="https://refaund.biz/" target="_blank"><img src="https://generatormr.com/wp-content/themes/generator/img/0zA7Aly.gif" alt="banner1"></a>
-								<a href="https://web.telegram.org/#/im?p=@albertmolodoy" target="_blank"><img src="https://generatormr.com/wp-content/themes/generator/img/kcWc3JU.gif" alt="banner2"></a>
-								<a href="https://opencard.pw/index.php" target="_blank"><img src="https://generatormr.com/wp-content/themes/generator/img/q27GdmE.gif" alt="banner2"></a>
-								<a href="https://sshtunnels.bz" target="_blank"><img src="https://generatormr.com/wp-content/themes/generator/img/26531906.gif" alt="banner4"></a><a href="http://ttttt.me/bluecube_bot" target="_blank"><img src="https://generatormr.com/wp-content/themes/generator/img/Eubs9Fb.gif" alt="banner5"></a>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</header>
-	<!-- Header -->
-
-	<section id="work-box" class="work-box _mPS2id-t mPS2id-target mPS2id-target-first mPS2id-target-last">
-		<div class="container">
-			<!-- Tabs -->
-			<ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
-				<li class="nav-item">
-					<a class="nav-link active show" id="pills-home-tab" data-toggle="pill" href="#pills-home" role="tab" aria-controls="pills-home" aria-selected="true">Enter data</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link" id="pills-profile-tab" data-toggle="pill" href="#pills-profile" role="tab" aria-controls="pills-profile" aria-selected="false">Full info</a>
-				</li>
-			</ul>
-			<div class="tab-content" id="pills-tabContent">
-				<!-- First tab -->
-				<div class="tab-pane fade active show" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
-					<div class="row">
-						<div class="col-lg-7 col-md-7 col-sm-12 col-xs-12 form-box">
-							<form action="" method="post" id="form1" name="form1" onsubmit="valid()">
-								<div class="row">
-									<div class="col-md-12">
-										<h2>US SSN / Driver License / State ID / Passport </h2>
-										<label class="form-group select-box">
-											<span class="color_element">*</span> <b>US State or Territory:</b>
-											<select id="userStateSelect" name="usstt" required="" onchange="javascript:stateid_show_inp();" aria-invalid="false">
-												<option value="" selected="">Select</option>
-												<option value="Alabama (AL)">Alabama (AL)</option>
-												<option value="Alaska (AK)">Alaska (AK)</option>
-												<option value="Arizona (AZ)">Arizona (AZ)</option>
-												<option value="Arkansas (AR)">Arkansas (AR)</option>
-												<option value="California (CA)">California (CA)</option>
-												<option value="Colorado (CO)">Colorado (CO)</option>
-												<option value="Connecticut (CT)">Connecticut (CT)</option>
-												<option value="District of Columbia (DC)">District of Columbia (DC)</option>
-												<option value="Delaware (DE)">Delaware (DE)</option>
-												<option value="Florida (FL)">Florida (FL)</option>
-												<option value="Georgia (GA)">Georgia (GA)</option>
-												<option value="Hawaii (HI)">Hawaii (HI)</option>
-												<option value="Idaho (ID)">Idaho (ID)</option>
-												<option value="Illinois (IL)">Illinois (IL)</option>
-												<option value="Indiana (IN)">Indiana (IN)</option>
-												<option value="Iowa (IA)">Iowa (IA)</option>
-												<option value="Kansas (KS)">Kansas (KS)</option>
-												<option value="Kentucky (KY)">Kentucky (KY)</option>
-												<option value="Louisiana (LA)">Louisiana (LA)</option>
-												<option value="Maine (ME)">Maine (ME)</option>
-												<option value="Maryland (MD)">Maryland (MD)</option>
-												<option value="Massachusetts (MA)">Massachusetts (MA)</option>
-												<option value="Michigan (MI)">Michigan (MI)</option>
-												<option value="Minnesota (MN)">Minnesota (MN)</option>
-												<option value="Mississippi (MS)">Mississippi (MS)</option>
-												<option value="Missouri (MO)">Missouri (MO)</option>
-												<option value="Montana (MT)">Montana (MT)</option>
-												<option value="Nebraska (NE)">Nebraska (NE)</option>
-												<option value="Nevada (NV)">Nevada (NV)</option>
-												<option value="New Hampshire (NH)">New Hampshire (NH)</option>
-												<option value="New Jersey (NJ)">New Jersey (NJ)</option>
-												<option value="New Mexico (NM)">New Mexico (NM)</option>
-												<option value="New York (NY)">New York (NY)</option>
-												<option value="North Carolina (NC)">North Carolina (NC)</option>
-												<option value="North Dakota (ND)">North Dakota (ND)</option>
-												<option value="Ohio (OH)">Ohio (OH)</option>
-												<option value="Oklahoma (OK)">Oklahoma (OK)</option>
-												<option value="Oregon (OR)">Oregon (OR)</option>
-												<option value="Pennsylvania (PA)">Pennsylvania (PA)</option>
-												<option value="Rhode Island (RI)">Rhode Island (RI)</option>
-												<option value="South Carolina (SC)">South Carolina (SC)</option>
-												<option value="South Dakota (SD)">South Dakota (SD)</option>
-												<option value="Tennessee (TN)">Tennessee (TN)</option>
-												<option value="Texas (TX)">Texas (TX)</option>
-												<option value="Utah (UT)">Utah (UT)</option>
-												<option value="Vermont (VT)">Vermont (VT)</option>
-												<option value="Virginia (VA)">Virginia (VA)</option>
-												<option value="Washington (WA)">Washington (WA)</option>
-												<option value="West Virginia (WV)">West Virginia (WV)</option>
-												<option value="Wisconsin (WI)">Wisconsin (WI)</option>
-												<option value="Wyoming (WY)">Wyoming (WY)</option>
-											</select>
-											<span class="help-block text-danger"></span>
-											<div class="check-box-include">
-												<input type="checkbox" class="check-box-main" value="1" name="ckpassport" id="ckpassport" checked="" onchange="javascript:togglepasspxtraf();" aria-invalid="false">
-												<p> Include Passport</p>
-											</div>
-										</label>
-									</div>
-								</div>
-								<div class="row for-full-width">
-									<!-- Name boxes -->
-									<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
-										<label class="form-group">
-											<input class="userFirstName" type="text" name="userFirstName" placeholder="* First name" data-validation-required-message="You have not entered a name" required="">
-											<span class="help-block text-danger"></span>
-										</label>
-									</div>
-									<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
-										<label class="form-group">
-											<input class="userMiddleName" type="text" name="userMiddleName" placeholder="Middle name (if any)" data-validation-required-message="You have not entered a middle name">
-											<span class="help-block text-danger"></span>
-										</label>
-									</div>
-									<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
-										<label class="form-group">
-											<input class="userLastName" type="text" name="userLastName" placeholder="* Last name" data-validation-required-message="You have not entered a last name" required="">
-											<span class="help-block text-danger"></span>
-										</label>
-									</div>
-									<!-- / Name boxes -->
-								</div>
-								<div class="row">
-									<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 personal-info">
-										<div class="radiobutton-box">
-											<p><b>Gender:</b></p>
-											<div class="form-check form-check-inline">
-												<label class="form-check-label" for="inlineRadio1">Male</label>
-												<input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1" checked="">
-											</div>
-											<div class="form-check form-check-inline"><label class="form-check-label" for="inlineRadio2">Female</label>
-												<input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
-											</div>
-										</div>
-										<div class="birthday-date">
-											<p class="birthday-text-box">
-												<b>Date of birth (YYYY/MM/DD): </b>
-											</p>
-											<input type="number" name="year" class="userBirthYear" placeholder="1991" data-validation-required-message="Incorrectly entered year" required="">
-											<select name="bdmm" id="bdmm" class="userBirthMounth">
-												<option value="1">January</option>
-												<option value="2">February</option>
-												<option value="3" selected="">March</option>
-												<option value="4">April</option>
-												<option value="5">May</option>
-												<option value="6">June</option>
-												<option value="7">July</option>
-												<option value="8">August</option>
-												<option value="9">September</option>
-												<option value="10">October</option>
-												<option value="11">November</option>
-												<option value="12">December</option>
-											</select>
-											<!-- <input type="text" name="bddd" id="bddd" size="2" maxlength="2"> -->
-											<select name="bddd" id="bddd" class="userBirthDay">
-												<option value="1">1</option>
-												<option value="2">2</option>
-												<option value="3">3</option>
-												<option value="4">4</option>
-												<option value="5">5</option>
-												<option value="6">6</option>
-												<option value="7">7</option>
-												<option value="8">8</option>
-												<option value="9">9</option>
-												<option value="10">10</option>
-												<option value="11">11</option>
-												<option value="12">12</option>
-												<option value="13">13</option>
-												<option value="14">14</option>
-												<option value="15">15</option>
-												<option value="16">16</option>
-												<option value="17">17</option>
-												<option value="18">18</option>
-												<option value="19">19</option>
-												<option value="20">20</option>
-												<option value="21" selected="">21</option>
-												<option value="22">22</option>
-												<option value="23">23</option>
-												<option value="24">24</option>
-												<option value="25">25</option>
-												<option value="26">26</option>
-												<option value="27">27</option>
-												<option value="28">28</option>
-												<option value="29">29</option>
-												<option value="30">30</option>
-												<option value="31">31</option>
-											</select>
-										</div>
-									</div>
-								</div>
-								<!-- <button type="submit" class="btn btn-primary">Generate</button> -->
-							</form>
-						</div>
-						<div class="col-lg-5 col-md-5 col-sm-12 col-xs-12 table-box">
-							<div class="img-main-box">
-								<img id="document-images" src="https://generatormr.com/wp-content/themes/generator/img/driver-license/license.png" alt="Document image" class="animated fadeInUp" style="opacity: 1;">
-							</div>
-							<!-- First table -->
-							<table class="table generated-info">
-								<tbody>
-									<tr>
-										<th scope="row" class="SSN"><b>SSN:</b></th>
-										<td><b id="ssnRandomFirst">000</b>-<b id="ssnRandomSecond">00</b>-<b id="ssnRandomThird">0000</b> - issued <b id="contenUserState">in Alabama (AL)</b></td>
-									</tr>
-									<tr>
-										<th scope="row" class="DL"><b>Driver License:</b></th>
-										<td><b id="preNumb"></b><b id="drLatterFirst"></b><b id="drLatterFirstSec"></b><b id="drLatterFirstThr"></b><b id="drLatterFirst4"></b><b id="drLatterFirst5"></b><b id="drLatterFirst6"></b><b id="drGenerated"></b><b id="drLatterSecond"></b><b id="drLatterSecond2"></b> Jacob - issued in <b id="contenUserStateDublicate">in Alabama (AL)</b> on <b id="issuedDate">...</b>, expires <b id="expiresDate">...</b></td>
-									</tr>
-								</tbody>
-							</table>
-							<!-- Second table -->
-							<p class="pasportBox"><b>Passport</b></p><table class="table generated-info">
-
-								<tbody>
-									<tr>
-										<th scope="row">No.:</th>
-										<td><b id="noNumber">586133302</b></td>
-									</tr>
-									<tr>
-										<th scope="row">Issued:</th>
-										<td><b>March/12/2013</b></td>
-									</tr>
-									<tr>
-										<th scope="row">Expires:</th>
-										<td><b>March/11/2023</b></td>
-									</tr>
-									<tr>
-										<th scope="row">Name:</th>
-										<td><b><p id="contenFirstName"></p><p id="contenMiddleName"></p><p id="contenLastName"></p></b></td>
-									</tr>
-								</tbody></table>
-								<div class="finalPassportInfo">
-									<div class="overfl-boox">
-										<p id="firstInfoStroke">P&lt;USA<b id="contenLastNameFinal"></b>&lt;&lt;<b id="contenFirstNameFinal"></b>&lt;<b id="contenMiddleNameFinal"></b><b id="needToAdd"></b></p>
-										<p><b id="noNumberFinal">586133302</b><span id="oneRandomNumber">5</span>USA<b id="contenUserYear"></b><b id="contenUserMounth"></b><b id="contenUserDay"></b><span id="oneRandomNumberSecond">7</span><span id="randomLatter">E</span>231103<span id="oneRandomNumberThird">9</span>&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;0<span id="oneRandomNumberFourth">5</span></p>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-					<!-- Second tabs -->
-					<div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
-						<div class="row">
-							<div class="col-lg-7 col-md-7 col-sm-12 col-xs-12 form-box">
-								<p class="fullInfoQueryGanerated"></p>
-								<form action="full-info" method="post" name="fullInfo">
-									<input type="submit" name="done" value="Click to generate" class="fullBtn">
-								</form>
-							</div>
-							<div class="col-lg-5 col-md-5 col-sm-12 col-xs-12 table-box">
-								<p class="helpInfo">
-									This is the generated data of real people, the database has the form of 2016-2017 years, here you can make the generation of any us state,the data fall completely randomly from the database of residents of the United States of America,the generation of complete information is for informational purposes and can not be used in illegal actions and fraud.
-								</p>
-							</div>
-						</div>
-					</div>
-				</div>
-				<!-- / Tabs -->
-			</div>
-		</section>
-
-		<section id="details" class="details">
-			<div class="container">
-				<div class="row">
-					<div class="col-md-12">
-						<p>This tool generates information from algorithms, it does not produce actual issued documents nor facsimiles, specimen or samples of real documents. It's not meant for driving, FLVS driver's ed, insurance, or any other official use.</p>
-
-						<p>In the United States of America, a Social Security number (SSN) is a 9 digit number issued to US citizens, permanent residents, and temporary (working) residents under section 205(c)(2) of the Social Security Act, codified as 42 U.S.C. § 405(c)(2). The number is issued to an individual by the Social Security Administration, an independent agency of the United States government. Although its primary purpose is to track individuals for Social Security purposes, the Social Security number has become a de facto national identification number for taxation and other purposes.
-						A Social Security number may be obtained by applying on Form SS-5, Application for A Social Security Number Card.
-						If you are wondering "What's my SSN?", which means you have an actual SSN but you don't remember it, the best and surest way to retrieve it is to call the Social Security Administration.</p>
-
-						<p>A Taxpayer Identification Number (TIN) is an identifying number used for tax purposes in the United States. It is also known as a Tax Identification Number or Federal Taxpayer Identification Number. A TIN may be assigned by the Social Security Administration or by the Internal Revenue Service (IRS).</p>
-
-						<p>In the United States of America, driver's licenses are issued by each individual state, territories, and the federal district rather than by the federal government because of the concept of federalism. Drivers are normally required to obtain a license from their state of residence and all states recognize each other's licenses for temporary visitors subject to normal age requirements. A state may also suspend an individual's driving privilege within its borders for traffic violations. Many states share a common system of license classes, with some exceptions, and commercial license classes are standardized by federal regulation at 49 C.F.R. 383.</p>
-					</div>
-				</div>
-			</div>
-		</section>
-
-		<footer class="main_footer bg_dark _mPS2id-t" id="contacts">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                        <div class="social_wrap">
-                            <ul>
-                                <li><a href="#" target="_blank"><i class="fa fa-lightbulb"></i>Jabber: generatormr@exploit.im</a></li>
+    <header class="__header">
+        <div class="container">
+            <div class="row">
+                <div class="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6 __header-logo-box">
+                    <a href="#">
+                        <h2><span>mr.</span>Generator</h2>
+                    </a>
+                </div>
+                <div class="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6 __header-switcher-box">
+                    <div class="language-switcher">
+                        <select name="lang_choice_1" id="lang_choice_1">
+                            <option value="ru" selected="selected">Ру</option>
+                            <option value="uk">Укр</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="top-descr">
+            <div class="top-centered">
+                <div class="marquee-box">
+                    <div class="container">
+                        <marquee behavior="scroll" direction="right">
+                            <ul class="post-meta">
+                                <li><span class="post-meta-key">Update:</span> Page with full info on maintenance!!!!</li>
                             </ul>
+                        </marquee>
+                        <div class="top_text" style="opacity: 1;">
+                            <a href="#work-box" class="_mPS2id-h">
+                                <h1>Generate a document</h1>
+                            </a>
+                            <p>
+                                <a href="#work-box" class="_mPS2id-h">US SSN</a><span> / </span>
+                                <a href="#work-box" class="_mPS2id-h">Driver license</a><span> / </span>
+                                <a href="#work-box" class="_mPS2id-h">State ID</a><span> / </span>
+                                <a href="#work-box" class="_mPS2id-h">Passport</a>
+                            </p>
+                            <div class="banner-box">
+                                <a href="https://refaund.biz/" target="_blank"><img src="https://generatormr.com/wp-content/themes/generator/img/0zA7Aly.gif" alt="banner1"></a>
+                                <a href="https://web.telegram.org/#/im?p=@albertmolodoy" target="_blank"><img src="https://generatormr.com/wp-content/themes/generator/img/kcWc3JU.gif" alt="banner2"></a>
+                                <a href="https://opencard.pw/index.php" target="_blank"><img src="https://generatormr.com/wp-content/themes/generator/img/q27GdmE.gif" alt="banner2"></a>
+                                <a href="https://sshtunnels.bz" target="_blank"><img src="https://generatormr.com/wp-content/themes/generator/img/26531906.gif" alt="banner4"></a><a href="http://ttttt.me/bluecube_bot" target="_blank"><img src="https://generatormr.com/wp-content/themes/generator/img/Eubs9Fb.gif" alt="banner5"></a>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </footer>
-
-	<!-- Header
+        </div>
+        <button class="toggle_mnu">
+            <span class="sandwich">
+                <span class="sw-topper"></span>
+                <span class="sw-bottom"></span>
+                <span class="sw-footer"></span>
+            </span>
+        </button>
+        <nav class="top_mnu">
+            <div class="menu-glavnoe-menyu-container">
+                <ul id="menu-glavnoe-menyu" class="menu">
+                    <li><a href="#">GENERATE</a></li>
+                    <li><a href="#">ADVERTISING</a></li>
+                    <li><a href="#">HELP</a></li>
+                    <li><a href="#">CONTACTS</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <!-- Header -->
+    <section id="work-box" class="work-box _mPS2id-t mPS2id-target mPS2id-target-first mPS2id-target-last">
+        <div class="container">
+            <!-- Tabs -->
+            <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+                <li class="nav-item">
+                    <a class="nav-link active show" id="pills-home-tab" data-toggle="pill" href="#pills-home" role="tab" aria-controls="pills-home" aria-selected="true">Enter data</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="pills-profile-tab" data-toggle="pill" href="#pills-profile" role="tab" aria-controls="pills-profile" aria-selected="false">Full info</a>
+                </li>
+            </ul>
+            <div class="tab-content" id="pills-tabContent">
+                <!-- First tab -->
+                <div class="tab-pane fade active show" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
+                    <div class="row">
+                        <div class="col-lg-7 col-md-7 col-sm-12 col-xs-12 form-box">
+                            <form action="" method="post" id="form1" name="form1" onsubmit="valid()">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <h2>US SSN / Driver License / State ID / Passport </h2>
+                                        <label class="form-group select-box">
+                                            <span class="color_element">*</span> <b>US State or Territory:</b>
+                                            <select id="userStateSelect" name="usstt" required="" onchange="javascript:stateid_show_inp();" aria-invalid="false">
+                                                <option value="" selected="">Select</option>
+                                                <option value="Alabama (AL)">Alabama (AL)</option>
+                                                <option value="Alaska (AK)">Alaska (AK)</option>
+                                                <option value="Arizona (AZ)">Arizona (AZ)</option>
+                                                <option value="Arkansas (AR)">Arkansas (AR)</option>
+                                                <option value="California (CA)">California (CA)</option>
+                                                <option value="Colorado (CO)">Colorado (CO)</option>
+                                                <option value="Connecticut (CT)">Connecticut (CT)</option>
+                                                <option value="District of Columbia (DC)">District of Columbia (DC)</option>
+                                                <option value="Delaware (DE)">Delaware (DE)</option>
+                                                <option value="Florida (FL)">Florida (FL)</option>
+                                                <option value="Georgia (GA)">Georgia (GA)</option>
+                                                <option value="Hawaii (HI)">Hawaii (HI)</option>
+                                                <option value="Idaho (ID)">Idaho (ID)</option>
+                                                <option value="Illinois (IL)">Illinois (IL)</option>
+                                                <option value="Indiana (IN)">Indiana (IN)</option>
+                                                <option value="Iowa (IA)">Iowa (IA)</option>
+                                                <option value="Kansas (KS)">Kansas (KS)</option>
+                                                <option value="Kentucky (KY)">Kentucky (KY)</option>
+                                                <option value="Louisiana (LA)">Louisiana (LA)</option>
+                                                <option value="Maine (ME)">Maine (ME)</option>
+                                                <option value="Maryland (MD)">Maryland (MD)</option>
+                                                <option value="Massachusetts (MA)">Massachusetts (MA)</option>
+                                                <option value="Michigan (MI)">Michigan (MI)</option>
+                                                <option value="Minnesota (MN)">Minnesota (MN)</option>
+                                                <option value="Mississippi (MS)">Mississippi (MS)</option>
+                                                <option value="Missouri (MO)">Missouri (MO)</option>
+                                                <option value="Montana (MT)">Montana (MT)</option>
+                                                <option value="Nebraska (NE)">Nebraska (NE)</option>
+                                                <option value="Nevada (NV)">Nevada (NV)</option>
+                                                <option value="New Hampshire (NH)">New Hampshire (NH)</option>
+                                                <option value="New Jersey (NJ)">New Jersey (NJ)</option>
+                                                <option value="New Mexico (NM)">New Mexico (NM)</option>
+                                                <option value="New York (NY)">New York (NY)</option>
+                                                <option value="North Carolina (NC)">North Carolina (NC)</option>
+                                                <option value="North Dakota (ND)">North Dakota (ND)</option>
+                                                <option value="Ohio (OH)">Ohio (OH)</option>
+                                                <option value="Oklahoma (OK)">Oklahoma (OK)</option>
+                                                <option value="Oregon (OR)">Oregon (OR)</option>
+                                                <option value="Pennsylvania (PA)">Pennsylvania (PA)</option>
+                                                <option value="Rhode Island (RI)">Rhode Island (RI)</option>
+                                                <option value="South Carolina (SC)">South Carolina (SC)</option>
+                                                <option value="South Dakota (SD)">South Dakota (SD)</option>
+                                                <option value="Tennessee (TN)">Tennessee (TN)</option>
+                                                <option value="Texas (TX)">Texas (TX)</option>
+                                                <option value="Utah (UT)">Utah (UT)</option>
+                                                <option value="Vermont (VT)">Vermont (VT)</option>
+                                                <option value="Virginia (VA)">Virginia (VA)</option>
+                                                <option value="Washington (WA)">Washington (WA)</option>
+                                                <option value="West Virginia (WV)">West Virginia (WV)</option>
+                                                <option value="Wisconsin (WI)">Wisconsin (WI)</option>
+                                                <option value="Wyoming (WY)">Wyoming (WY)</option>
+                                            </select>
+                                            <span class="help-block text-danger"></span>
+                                            <div class="check-box-include">
+                                                <input type="checkbox" class="check-box-main" value="1" name="ckpassport" id="ckpassport" checked="" onchange="javascript:togglepasspxtraf();" aria-invalid="false">
+                                                <p> Include Passport</p>
+                                            </div>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="row for-full-width">
+                                    <!-- Name boxes -->
+                                    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                                        <label class="form-group">
+                                            <input class="userFirstName" type="text" name="userFirstName" placeholder="* First name" data-validation-required-message="You have not entered a name" required="">
+                                            <span class="help-block text-danger"></span>
+                                        </label>
+                                    </div>
+                                    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                                        <label class="form-group">
+                                            <input class="userMiddleName" type="text" name="userMiddleName" placeholder="Middle name (if any)" data-validation-required-message="You have not entered a middle name">
+                                            <span class="help-block text-danger"></span>
+                                        </label>
+                                    </div>
+                                    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                                        <label class="form-group">
+                                            <input class="userLastName" type="text" name="userLastName" placeholder="* Last name" data-validation-required-message="You have not entered a last name" required="">
+                                            <span class="help-block text-danger"></span>
+                                        </label>
+                                    </div>
+                                    <!-- / Name boxes -->
+                                </div>
+                                <div class="row">
+                                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 personal-info">
+                                        <div class="radiobutton-box">
+                                            <p><b>Gender:</b></p>
+                                            <div class="form-check form-check-inline">
+                                                <label class="form-check-label" for="inlineRadio1">Male</label>
+                                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1" checked="">
+                                            </div>
+                                            <div class="form-check form-check-inline"><label class="form-check-label" for="inlineRadio2">Female</label>
+                                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+                                            </div>
+                                        </div>
+                                        <div class="birthday-date">
+                                            <p class="birthday-text-box">
+                                                <b>Date of birth (YYYY/MM/DD): </b>
+                                            </p>
+                                            <input type="number" name="year" class="userBirthYear" placeholder="1991" data-validation-required-message="Incorrectly entered year" required="">
+                                            <select name="bdmm" id="bdmm" class="userBirthMounth">
+                                                <option value="1">January</option>
+                                                <option value="2">February</option>
+                                                <option value="3" selected="">March</option>
+                                                <option value="4">April</option>
+                                                <option value="5">May</option>
+                                                <option value="6">June</option>
+                                                <option value="7">July</option>
+                                                <option value="8">August</option>
+                                                <option value="9">September</option>
+                                                <option value="10">October</option>
+                                                <option value="11">November</option>
+                                                <option value="12">December</option>
+                                            </select>
+                                            <!-- <input type="text" name="bddd" id="bddd" size="2" maxlength="2"> -->
+                                            <select name="bddd" id="bddd" class="userBirthDay">
+                                                <option value="1">1</option>
+                                                <option value="2">2</option>
+                                                <option value="3">3</option>
+                                                <option value="4">4</option>
+                                                <option value="5">5</option>
+                                                <option value="6">6</option>
+                                                <option value="7">7</option>
+                                                <option value="8">8</option>
+                                                <option value="9">9</option>
+                                                <option value="10">10</option>
+                                                <option value="11">11</option>
+                                                <option value="12">12</option>
+                                                <option value="13">13</option>
+                                                <option value="14">14</option>
+                                                <option value="15">15</option>
+                                                <option value="16">16</option>
+                                                <option value="17">17</option>
+                                                <option value="18">18</option>
+                                                <option value="19">19</option>
+                                                <option value="20">20</option>
+                                                <option value="21" selected="">21</option>
+                                                <option value="22">22</option>
+                                                <option value="23">23</option>
+                                                <option value="24">24</option>
+                                                <option value="25">25</option>
+                                                <option value="26">26</option>
+                                                <option value="27">27</option>
+                                                <option value="28">28</option>
+                                                <option value="29">29</option>
+                                                <option value="30">30</option>
+                                                <option value="31">31</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- <button type="submit" class="btn btn-primary">Generate</button> -->
+                            </form>
+                        </div>
+                        <div class="col-lg-5 col-md-5 col-sm-12 col-xs-12 table-box">
+                            <div class="img-main-box">
+                                <img id="document-images" src="https://generatormr.com/wp-content/themes/generator/img/driver-license/license.png" alt="Document image" class="animated fadeInUp" style="opacity: 1;">
+                            </div>
+                            <!-- First table -->
+                            <table class="table generated-info">
+                                <tbody>
+                                    <tr>
+                                        <th scope="row" class="SSN"><b>SSN:</b></th>
+                                        <td><b id="ssnRandomFirst">000</b>-<b id="ssnRandomSecond">00</b>-<b id="ssnRandomThird">0000</b> - issued <b id="contenUserState">in Alabama (AL)</b></td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row" class="DL"><b>Driver License:</b></th>
+                                        <td><b id="preNumb"></b><b id="drLatterFirst"></b><b id="drLatterFirstSec"></b><b id="drLatterFirstThr"></b><b id="drLatterFirst4"></b><b id="drLatterFirst5"></b><b id="drLatterFirst6"></b><b id="drGenerated"></b><b id="drLatterSecond"></b><b id="drLatterSecond2"></b> Jacob - issued in <b id="contenUserStateDublicate">in Alabama (AL)</b> on <b id="issuedDate">...</b>, expires <b id="expiresDate">...</b></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <!-- Second table -->
+                            <p class="pasportBox"><b>Passport</b></p>
+                            <table class="table generated-info">
+                                <tbody>
+                                    <tr>
+                                        <th scope="row">No.:</th>
+                                        <td><b id="noNumber">586133302</b></td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">Issued:</th>
+                                        <td><b>March/12/2013</b></td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">Expires:</th>
+                                        <td><b>March/11/2023</b></td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">Name:</th>
+                                        <td><b>
+                                                <p id="contenFirstName"></p>
+                                                <p id="contenMiddleName"></p>
+                                                <p id="contenLastName"></p>
+                                            </b></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <div class="finalPassportInfo">
+                                <div class="overfl-boox">
+                                    <p id="firstInfoStroke">P&lt;USA<b id="contenLastNameFinal"></b>&lt;&lt;<b id="contenFirstNameFinal"></b>&lt;<b id="contenMiddleNameFinal"></b><b id="needToAdd"></b></p>
+                                    <p><b id="noNumberFinal">586133302</b><span id="oneRandomNumber">5</span>USA<b id="contenUserYear"></b><b id="contenUserMounth"></b><b id="contenUserDay"></b><span id="oneRandomNumberSecond">7</span><span id="randomLatter">E</span>231103<span id="oneRandomNumberThird">9</span>&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;0<span id="oneRandomNumberFourth">5</span></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Second tabs -->
+                <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
+                    <div class="row">
+                        <div class="col-lg-7 col-md-7 col-sm-12 col-xs-12 form-box">
+                            <p class="fullInfoQueryGanerated"></p>
+                            <form action="full-info" method="post" name="fullInfo">
+                                <input type="submit" name="done" value="Click to generate" class="fullBtn">
+                            </form>
+                        </div>
+                        <div class="col-lg-5 col-md-5 col-sm-12 col-xs-12 table-box">
+                            <p class="helpInfo">
+                                This is the generated data of real people, the database has the form of 2016-2017 years, here you can make the generation of any us state,the data fall completely randomly from the database of residents of the United States of America,the generation of complete information is for informational purposes and can not be used in illegal actions and fraud.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- / Tabs -->
+        </div>
+    </section>
+    <section id="details" class="details">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <p>This tool generates information from algorithms, it does not produce actual issued documents nor facsimiles, specimen or samples of real documents. It's not meant for driving, FLVS driver's ed, insurance, or any other official use.</p>
+                    <p>In the United States of America, a Social Security number (SSN) is a 9 digit number issued to US citizens, permanent residents, and temporary (working) residents under section 205(c)(2) of the Social Security Act, codified as 42 U.S.C. § 405(c)(2). The number is issued to an individual by the Social Security Administration, an independent agency of the United States government. Although its primary purpose is to track individuals for Social Security purposes, the Social Security number has become a de facto national identification number for taxation and other purposes.
+                        A Social Security number may be obtained by applying on Form SS-5, Application for A Social Security Number Card.
+                        If you are wondering "What's my SSN?", which means you have an actual SSN but you don't remember it, the best and surest way to retrieve it is to call the Social Security Administration.</p>
+                    <p>A Taxpayer Identification Number (TIN) is an identifying number used for tax purposes in the United States. It is also known as a Tax Identification Number or Federal Taxpayer Identification Number. A TIN may be assigned by the Social Security Administration or by the Internal Revenue Service (IRS).</p>
+                    <p>In the United States of America, driver's licenses are issued by each individual state, territories, and the federal district rather than by the federal government because of the concept of federalism. Drivers are normally required to obtain a license from their state of residence and all states recognize each other's licenses for temporary visitors subject to normal age requirements. A state may also suspend an individual's driving privilege within its borders for traffic violations. Many states share a common system of license classes, with some exceptions, and commercial license classes are standardized by federal regulation at 49 C.F.R. 383.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="main_footer bg_dark _mPS2id-t" id="contacts">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <div class="social_wrap">
+                        <ul>
+                            <li><a href="#" target="_blank"><i class="fa fa-lightbulb"></i>Jabber: generatormr@exploit.im</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Header
 	<header class="header">
 		<div class="container">
 			<div class="row top-bar">
@@ -412,8 +431,8 @@
 		</div>
 	</header>
 	/ Header -->
-	
-	<script src="js/libs.min.js"></script>
-	<script src="js/common.js"></script>
+    <script src="js/libs.min.js"></script>
+    <script src="js/common.js"></script>
 </body>
+
 </html>
