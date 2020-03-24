@@ -5,6 +5,7 @@
 3.  Header
 4.  Form
 5.  Work zone
+6.  Work zone
 
 */
 /* 1.  Fonts including */
@@ -776,3 +777,60 @@ footer a {
   -webkit-transition: .2s;
   -o-transition: .2s;
   transition: .2s; }
+
+/* 6.  Work zone */
+.dropdown-toggle {
+  background-color: transparent;
+  color: #fff;
+  border: solid 2px #6bb3ff;
+  font-size: 12px;
+  margin-top: 12px;
+  margin-right: 50px; }
+
+@media only screen and (max-device-width: 680px) {
+  .dropdown-toggle {
+    margin-right: 0px; } }
+
+@media only screen and (max-device-width: 680px) {
+  .dropdown-toggle {
+    font-size: 11px; } }
+
+.dropdown-menu li a {
+  padding-left: 30px;
+  font-size: 12px;
+  color: #6bb3ff;
+  -webkit-transition: .2s;
+  -o-transition: .2s;
+  transition: .2s; }
+  .dropdown-menu li a:hover {
+    color: #333; }
+
+@media only screen and (max-device-width: 680px) {
+  .dropdown-menu li a {
+    font-size: 11px; } }
+
+.dropdown-menu {
+  min-width: 0px;
+  padding-right: 30px;
+  left: -60px; }
+
+.dropdown-toggle:hover {
+  color: #6bb3ff; }
+
+.language-swtitcher-box {
+  float: right; }
+
+.language-swtitcher-box .language__selection {
+  z-index: 20; }
+
+@media only screen and (max-device-width: 680px) {
+  .language-swtitcher-box {
+    float: left;
+    margin-left: 25px; } }
+
+@media only screen and (max-device-width: 320px) {
+  .language-swtitcher-box {
+    margin-left: 5px; } }
+
+.table-box {
+  text-align: center; }

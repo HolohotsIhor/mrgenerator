@@ -31,6 +31,15 @@ $(document).ready(function() {
     $(window).resize(function() {
         heightDetect();
     });
+
+    // Dropdown language switcher
+     var displayDrop = 0;
+     $('.dropdown-toggle').click(function(){
+        $('.dropdown-menu').css('display','block');
+    });
+     $('html').click(function(){
+        $('.dropdown-menu').css('display','none');
+    });
 });
 
 /* Generator Logic */
