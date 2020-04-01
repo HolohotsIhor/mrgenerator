@@ -24,7 +24,7 @@ $(document).ready(function() {
 
     /* Header resize. Height: 100% for ever */
     function heightDetect() {
-        $("header").css("min-height", $(window).height());
+        $("header").css("min-height", "1100px");
         $("header").css("height", "auto");
     };
     heightDetect();
@@ -44,6 +44,15 @@ $(document).ready(function() {
 
 /* Generator Logic */
 $(document).ready(function() {
+
+    $('.form-check-input-m').click(function(){
+        $('#randomLatter').html("M");
+    });
+
+     $('.form-check-input-f').click(function(){
+        $('#randomLatter').html("F");
+    });
+
     //Input birth year
     $(".userBirthYear").keyup(function() {
         var birthLastTwoNumbers = $(".userBirthYear").val();
@@ -52,6 +61,23 @@ $(document).ready(function() {
         }
         $('#contenUserYear').text(birthLastTwoNumbers);
     });
+
+    //Input expires year
+    $(".userExpiresYear").keyup(function() {
+        var ExpiresNumbers = $(".userExpiresYear").val();
+        $('#yearExpires').text(ExpiresNumbers);
+        if (ExpiresNumbers.length == 4) {
+            ExpiresNumbers = ExpiresNumbers.slice(2);
+        }
+        $('#yearExpiresFull').text(ExpiresNumbers);
+    });
+
+    //Input issued year
+    $(".userIssedYear").keyup(function() {
+        var issuedNumbers = $(".userIssedYear").val();
+        $('#yearIssued').text(issuedNumbers);
+    });
+
     //Input birth mounth
     $(".userBirthMounth").change(function() {
         var userMounthFinal = $(".userBirthMounth").val();
@@ -60,6 +86,26 @@ $(document).ready(function() {
         }
         $('#contenUserMounth').text(userMounthFinal);
     });
+
+    //Input issued mounth
+    $(".userIssuedMounth").change(function() {
+        var userIssuedMounthFinal = $(".userIssuedMounth").val();
+        if ($(".userIssuedMounth").val() < 10) {
+            userIssuedMounthFinal = "0" + $(".userIssuedMounth").val();
+        }
+        $('#mounthIssued').text(userIssuedMounthFinal);
+    });
+
+    //Input expires mounth
+    $(".userExpiresMounth").change(function() {
+        var userExpiresMounthFinal = $(".userExpiresMounth").val();
+        if ($(".userExpiresMounth").val() < 10) {
+            userExpiresMounthFinal = "0" + $(".userExpiresMounth").val();
+        }
+        $('#mounthExpires').text(userExpiresMounthFinal);
+        $('#mounthExpiresFull').text(userExpiresMounthFinal);
+    });
+
     //Input birth day
     $(".userBirthDay").change(function() {
         var userMounthFinal = $(".userBirthDay").val();
@@ -68,6 +114,26 @@ $(document).ready(function() {
         }
         $('#contenUserDay').text(userMounthFinal);
     });
+
+    //Input issued day
+    $(".userIssuedDay").change(function() {
+        var userIssuedMounthFinal = $(".userIssuedDay").val();
+        if ($(".userIssuedDay").val() < 10) {
+            userIssuedMounthFinal = "0" + $(".userIssuedDay").val();
+        }
+        $('#dayIssued').text(userIssuedMounthFinal);
+    });
+
+    //Input expires day
+    $(".userExpiresDay").change(function() {
+        var userExpiresMounthFinal = $(".userExpiresDay").val();
+        if ($(".userExpiresDay").val() < 10) {
+            userExpiresMounthFinal = "0" + $(".userExpiresDay").val();
+        }
+        $('#dayExpires').text(userExpiresMounthFinal);
+        $('#dayExpiresFull').text(userExpiresMounthFinal);
+    });
+
     //Input first name
     $(".userFirstName").keyup(function() {
         $('#contenFirstName').text($(".userFirstName").val());
@@ -645,7 +711,7 @@ function ssnGenerator() {
 };
 /* Random NO generator function */
 function noGenerator() {
-    var onRandomNumber = Math.floor((Math.random() * 899999999) + 100000000);
+    var onRandomNumber = Math.floor((Math.random() * 89999999) + 10000000);
     $('#noNumber').html(onRandomNumber);
     $('#noNumberFinal').html(onRandomNumber);
 };
@@ -693,7 +759,6 @@ function makeid() {
     //Include functions
     noGenerator();
     oneNumberPassport();
-    $('#randomLatter').html(makeid());
     /* Length of strokes function */
     function lineAlignmentMore() {
         var testStrokeFirst = $('#firstInfoStroke').text().length;

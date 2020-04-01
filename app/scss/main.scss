@@ -62,10 +62,7 @@ a {
     }
 }
 
-header {
-    height: 100%;
-
-    .toggle_mnu {
+.toggle_mnu {
         width: 60px;
         height: 60px;
         position: fixed;
@@ -308,6 +305,11 @@ header {
         }
     }
 
+
+header {
+    height: 100%;
+
+    
 
     .__header-logo-box {
 
@@ -793,15 +795,19 @@ header {
 }
 
 .work-box .overfl-boox {
-    width: 399px;
+    width: 430px;
     white-space: nowrap;
     overflow: hidden;
     float: right;
+
+    .second-string-box{
+        letter-spacing: 0;
+    }
 }
 
 @media only screen and (max-device-width: 420px) {
     .work-box .overfl-boox {
-        width: 287px;
+        width: 270px;
         white-space: nowrap;
         overflow: hidden;
         float: right;
@@ -977,6 +983,7 @@ header {
     display: inline-block;
     font-size: 13px;
     padding: 0 3px;
+    line-height: 26px;
 }
 
 /* 9. String */
@@ -1102,4 +1109,39 @@ footer a {
 
 .table-box{
     text-align: center;
+}
+
+.dynamic-passport-date{
+    display: inline-block;
+    width: 100%;
+    padding-top: 40px;
+
+    .issued-date{
+        margin-bottom: 20px;
+        width: 100%;
+        display: inline-block;
+    }
+
+    .expires-date{
+        width: 100%;
+        display: inline-block;
+    }
+
+    input,
+    select {
+        max-width: 150px;
+        float: left;
+        height: 35px;
+        min-height: 35px;
+        font-size: 13px;
+        margin-right: 2px;
+    }
+
+    @media only screen and (max-device-width: 991px) {
+
+        input,
+        select {
+            max-width: 100px;
+        }
+    }
 }
